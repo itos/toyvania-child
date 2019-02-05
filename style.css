@@ -15,3 +15,38 @@ Template: toyvania
 Version: 0.1
 
 */
+
+
+/* Header */
+#header-outer[data-format="centered-menu-under-logo"] header#top .span_9 nav >ul >li:not(#social-in-menu):not(#search-btn):not(.slide-out-widget-area-toggle) >a {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+#header-outer[data-format="centered-menu-under-logo"] header#top .span_9 nav >ul >li:not(#social-in-menu):not(#search-btn):not(.slide-out-widget-area-toggle) >a {
+    padding-bottom: 16px!important;
+}
+
+body.material #header-outer #logo, body.material #header-outer .logo-spacing {
+    margin-top: 0px!important;
+    padding-top: 5px;
+    background: white;
+}
+
+.container, body[data-header-format="left-header"] .container, .woocommerce-tabs .full-width-content .tab-container, .nectar-recent-posts-slider .flickity-page-dots, .post-area.standard-minimal.full-width-content article.post .inner-wrap, .material #search-outer #search {
+    max-width: 100%;
+    padding: 0px;
+}
+
+body.material #header-outer #logo, body.material #header-outer .logo-spacing {
+  background: transparent;
+}
+
+#header-outer[data-format="centered-menu-under-logo"] header#top:before {
+    background-color: #fc4444;
+    position: absolute;
+    height: 57px;
+    bottom: 0;
+    width: 100%;
+    content: '';
+}
