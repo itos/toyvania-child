@@ -50,3 +50,9 @@ body.material #header-outer #logo, body.material #header-outer .logo-spacing {
     width: 100%;
     content: '';
 }
+
+
+/* Footer */
+#footer-outer[data-cols="1"][data-disable-copyright="false"] #copyright {
+    padding-bottom: 30px;
+}
