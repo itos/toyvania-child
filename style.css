@@ -54,5 +54,21 @@ body.material #header-outer #logo, body.material #header-outer .logo-spacing {
 
 /* Footer */
 #footer-outer[data-cols="1"][data-disable-copyright="false"] #copyright {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+
+/* Sidebar */
+#sidebar h4 {
+  font-size: 16px;
+}
+
+input[type=submit], button[type=submit], input[type="button"] {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Contact Form */
+.wpcf7 textarea {
+  height: 200px!important;
 }
