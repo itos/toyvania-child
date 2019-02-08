@@ -19,8 +19,8 @@ Version: 0.1
 
 /* Header */
 #header-outer[data-format="centered-menu-under-logo"] header#top .span_9 nav >ul >li:not(#social-in-menu):not(#search-btn):not(.slide-out-widget-area-toggle) >a {
-  text-transform: uppercase;
-  font-size: 18px;
+    text-transform: uppercase;
+    font-size: 18px;
 }
 
 #header-outer[data-format="centered-menu-under-logo"] header#top .span_9 nav >ul >li:not(#social-in-menu):not(#search-btn):not(.slide-out-widget-area-toggle) >a {
@@ -39,7 +39,7 @@ body.material #header-outer #logo, body.material #header-outer .logo-spacing {
 }
 
 body.material #header-outer #logo, body.material #header-outer .logo-spacing {
-  background: transparent;
+    background: transparent;
 }
 
 #header-outer[data-format="centered-menu-under-logo"] header#top:before {
@@ -54,26 +54,40 @@ body.material #header-outer #logo, body.material #header-outer .logo-spacing {
 
 /* Footer */
 #footer-outer[data-cols="1"][data-disable-copyright="false"] #copyright {
-  padding-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 
 /* Sidebar */
 #sidebar h4 {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 input[type=submit], button[type=submit], input[type="button"] {
-  font-size: 14px;
-  font-weight: 700;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 /* Contact Form */
 .wpcf7 textarea {
-  height: 200px!important;
+    height: 200px!important;
 }
 
 /* Home */
 .nectar-highlighted-text.instance-0 em:before {
     background-color: #EF4427;
+}
+
+/* Login & Register */
+.woocommerce-account h2.n-disable-reg {
+    margin-top: 4%!important;
+}
+
+.woocommerce-account .woocommerce > #customer_login .nectar-form-controls .control {
+    background-image: linear-gradient(to right,#000000 0,#000000 100%)!important;
+    color: #111!important;
+}
+
+body #ajax-content-wrap #customer_login > div.nectar-form-controls > div.control.active {
+    color: #111!important;
 }
