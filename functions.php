@@ -17,5 +17,13 @@ function myoverride() {
     remove_action('wp_head', array(visual_composer(), 'addMetaData'));
   }
 }
+
+/**
+ * Remove password strength check.
+ */
+function iconic_remove_password_strength() {
+    wp_dequeue_script( 'wc-password-strength-meter' );
+}
+add_action( 'wp_print_scripts', 'iconic_remove_password_strength', 10 );
 
 ?>
