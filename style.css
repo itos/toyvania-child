@@ -51,6 +51,18 @@ body.material #header-outer #logo, body.material #header-outer .logo-spacing {
     content: '';
 }
 
+/* Secondary Header */
+body #header-secondary-outer nav >ul >li >a {
+    text-transform: uppercase;
+}
+
+body #header-secondary-outer .nectar-center-text {
+    font-size: 14px;
+}
+
+body #header-secondary-outer nav >ul >li >a {
+    border-color: #fff!important;
+}
 
 /* Footer */
 #footer-outer[data-cols="1"][data-disable-copyright="false"] #copyright {
