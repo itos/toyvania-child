@@ -103,3 +103,9 @@ input[type=submit], button[type=submit], input[type="button"] {
 body #ajax-content-wrap #customer_login > div.nectar-form-controls > div.control.active {
     color: #111!important;
 }
+
+/* WooCommerce */
+body #header-outer a.cart-contents .cart-wrap span {
+    background-color: #fff!important;
+    color: #111!important;
+}
