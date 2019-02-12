@@ -17,6 +17,13 @@ Version: 0.1
 */
 
 
+/* General */
+body em {
+  font-family: Arial,sans-serif!important;
+  font-size: 16px!important;
+  font-style: normal!important;
+}
+
 /* Header */
 #header-outer[data-format="centered-menu-under-logo"] header#top .span_9 nav >ul >li:not(#social-in-menu):not(#search-btn):not(.slide-out-widget-area-toggle) >a {
     text-transform: uppercase;
@@ -91,7 +98,7 @@ input[type=submit], button[type=submit], input[type="button"] {
 
 /* Home */
 .nectar-highlighted-text.instance-0 em:before {
-    background-color: #EF4427;
+    background-color: #EF4427!important;
 }
 
 /* Login & Register */
