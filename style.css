@@ -64,6 +64,10 @@ body #header-secondary-outer nav >ul >li >a {
     border-color: #fff!important;
 }
 
+html .material #header-secondary-outer[data-lhe="animated_underline"] nav >ul.sf-menu >li >a:after {
+  border-color: #fff!important;
+}
+
 /* Footer */
 #footer-outer[data-cols="1"][data-disable-copyright="false"] #copyright {
     padding-bottom: 30px;
@@ -108,4 +112,26 @@ body #ajax-content-wrap #customer_login > div.nectar-form-controls > div.control
 body #header-outer a.cart-contents .cart-wrap span {
     background-color: #fff!important;
     color: #111!important;
+}
+
+/* Easy Social Share Buttons */
+.essb_mailform_content .essb_mailform_content_label {
+    font-size: 16px;
+}
+
+.essb_mailform_content .essb_mailform_content_input {
+    font-size: 16px;
+}
+
+body .essb_mailform {
+    width: 310px!important;
+}
+
+.essb_mailform_content .essb_mailform_content_button {
+    background-color: #EF4427;
+    font-size: 14px;
+}
+
+.essb_mailform_content .essb_mailform_content_button:hover, .essb_mailform_content .essb_mailform_content_button:focus {
+    background-color: #F06047!important;
 }
