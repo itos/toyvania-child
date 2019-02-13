@@ -98,4 +98,9 @@ function nectar_header_social_icons( $location ) {
 
 	echo $social_output_html; // WPCS: XSS ok.
 }
+
+// Remove OpenGraph from Theme
+function nectar_add_opengraph() {
+
+}
 ?>
