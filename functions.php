@@ -103,4 +103,5 @@ function nectar_header_social_icons( $location ) {
 function nectar_add_opengraph() {
 
 }
+
 ?>

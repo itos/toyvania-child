@@ -170,7 +170,17 @@ body .essb_mailform {
 }
 
 /* Responsive */
+@media only screen and (min-width: 1001px) {
+    .nav-account-mobile {
+      display: none;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
+    #slide-out-widget-area .inner .off-canvas-menu-container.mobile-only .menu.secondary-header-items{
+      display: block!important;
+    }
+
     #sidebar {
       display: none!important;
    }
@@ -187,6 +197,10 @@ body .essb_mailform {
   .comment-list {
     padding-bottom: 40px!important;
   }
+
+  .nav-account {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1000px) and (min-width: 1px) {
@@ -194,9 +208,22 @@ body .essb_mailform {
         height: 45px!important;
     }
 
+    .wpb_row .span_12 > .col.padding-7-percent[data-padding-pos="all"], .column-inner.padding-7-percent[data-padding-pos="all"] {
+        padding: 7%!important;
+    }
     .woocommerce-account .woocommerce > #customer_login {
         padding: 0!important;
     }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 691px) {
+  .checkout .col2-set .col-1 {
+      width: 100%!important;
+  }
+
+  .checkout .woocommerce-shipping-fields, .checkout .woocommerce-billing-fields {
+      padding-right: 0!important;
+  }
 }
 
 @media only screen and (max-width: 690px) {
@@ -206,5 +233,13 @@ body .essb_mailform {
 
     .container #respond h3 {
         font-size: 16px;
+    }
+
+    .checkout .woocommerce-shipping-fields, .checkout .woocommerce-billing-fields {
+    padding-right: 0!important;
+    }
+
+    body #join .mc4wp-form-fields input[type="email"], body #join .mc4wp-form-fields input[type=submit] {
+    width: 100%!important;
     }
 }
