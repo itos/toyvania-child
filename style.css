@@ -58,6 +58,15 @@ body.material #header-outer #logo, body.material #header-outer .logo-spacing {
     content: '';
 }
 
+body.material #header-outer:not([data-format="left-header"]) header#top nav >ul.buttons {
+    margin-left: 0px!important;
+}
+
+#menu-item-3159 > a {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 /* Secondary Header */
 body #header-secondary-outer nav >ul >li >a {
     text-transform: uppercase;
@@ -158,4 +167,44 @@ body .essb_mailform {
 
 .essb_mailform_content .essb_mailform_content_button:hover, .essb_mailform_content .essb_mailform_content_button:focus {
     background-color: #F06047!important;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1000px) {
+    #sidebar {
+      display: none!important;
+   }
+
+   article.post .content-inner {
+    padding-bottom: 10px!important;
+    margin-bottom: 10px!important;
+  }
+
+  body .comment-list {
+    margin-bottom: 0px!important;
+  }
+
+  .comment-list {
+    padding-bottom: 40px!important;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 1px) {
+    body header#top, body #header-outer:not([data-permanent-transparent="1"]) {
+        height: 45px!important;
+    }
+
+    .woocommerce-account .woocommerce > #customer_login {
+        padding: 0!important;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    #top .container {
+        max-width: 350px!important;
+    }
+
+    .container #respond h3 {
+        font-size: 16px;
+    }
 }
