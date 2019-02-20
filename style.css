@@ -101,6 +101,19 @@ input[type=submit], button[type=submit], input[type="button"] {
     background-color: #EF4427!important;
 }
 
+.nectar-highlighted-text em {
+    font-size: 40px!important;
+}
+
+#join .mc4wp-form-fields input[type="email"] {
+    width: 400px!important;
+    background-color: #fff;
+}
+
+#join .mc4wp-form-fields input[type=submit] {
+    width: 400px!important;
+}
+
 /* Login & Register */
 .woocommerce-account h2.n-disable-reg {
     margin-top: 4%!important;
@@ -119,6 +132,10 @@ body #ajax-content-wrap #customer_login > div.nectar-form-controls > div.control
 body #header-outer a.cart-contents .cart-wrap span {
     background-color: #fff!important;
     color: #111!important;
+}
+
+.nectar-quick-view-box .single_add_to_cart_button_wrap a.single_add_to_cart_button span, .woocommerce .woocommerce-info a, .woocommerce-message a {
+    font-weight: bold;
 }
 
 /* Easy Social Share Buttons */
