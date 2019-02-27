@@ -30,13 +30,7 @@ body em {
     font-size: 18px;
 }
 
-#header-outer[data-format="centered-menu-under-logo"] header#top .span_9 nav >ul >li:not(#social-in-menu):not(#search-btn):not(.slide-out-widget-area-toggle) >a {
-    padding-bottom: 16px!important;
-}
-
 body.material #header-outer #logo, body.material #header-outer .logo-spacing {
-    margin-top: 0px!important;
-    padding-top: 5px;
     background: white;
 }
 
@@ -242,4 +236,14 @@ body .essb_mailform {
     body #join .mc4wp-form-fields input[type="email"], body #join .mc4wp-form-fields input[type=submit] {
     width: 100%!important;
     }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 1px) {
+  .checkout .col2-set .col-1 {
+      width: 100%;
+  }
+
+  .checkout .woocommerce-shipping-fields, .checkout .woocommerce-billing-fields {
+      padding-right: 0!important;
+  }
 }
