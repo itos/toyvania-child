@@ -104,4 +104,85 @@ function nectar_add_opengraph() {
 
 }
 
+// Remove WooCommerce Reviews Tab
+add_filter( 'woocommerce_product_tabs', '_remove_reviews_tab', 98 );
+function _remove_reviews_tab( $tabs ) {
+  unset( $tabs[ 'reviews' ] );
+  return $tabs;
+}
+
+function woocommerce_template_product_reviews() {
+woocommerce_get_template( 'single-product-reviews.php' );
+}
+add_action( 'woocommerce_after_single_product_summary', 'comments_template', 50 );
+
+// Merge Description and Additional Information Tabs
+add_filter('woocommerce_product_tabs', 'change_product_tab', 98);
+function change_product_tab($tabs){
+    global $product;
+
+    // Save the tabs to keep
+    $reviews = $tabs['reviews'];
+
+    // Remove tabs
+    unset($tabs['description']);
+    unset($tabs['additional_information']);
+    unset($tabs['reviews']);
+
+    // Add a new tab
+    $tabs['other_details'] = array(
+        'title'     => __( 'Details', 'woocommerce' ),
+        'priority'  => 10,
+        'callback'  => 'other_details_tab_content'
+    );
+
+    // Set the good priority to existing "reviews" tab
+    $reviews['priority'] = 20;
+
+    // Add back "reviews" tab
+    $tabs['reviews'] = $reviews;
+
+    return $tabs;
+}
+
+// Tab content (two columns)
+function other_details_tab_content() {
+    global $product;
+
+    $heading = esc_html( apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) ) );
+    $heading2 = esc_html( apply_filters( 'woocommerce_product_additional_information_heading', __( 'Additional information', 'woocommerce' ) ) );
+
+    ?>
+    <!-- Temporary styles (to be removed and inserted in the theme styles.css file) -->
+    <style>
+        .single-product .half-col{float:left; width:48%;}
+        .single-product .half-col.first{margin-right:4%;}
+        .single-product .half-col > h3{font-size:1.3em;}
+    </style>
+
+    <!-- 1. Product description -->
+
+    <div class="half-col first">
+
+    <?php if ( $heading ) : ?>
+      <h3><?php echo $heading; ?></h3>
+    <?php endif; ?>
+
+    <?php the_content(); ?>
+
+    </div>
+
+    <!-- 2. Product Additional information -->
+
+    <div class="half-col last">
+
+    <?php if ( $heading2 ) : ?>
+    <h3><?php echo $heading2; ?></h3>
+    <?php endif; ?>
+
+    <?php do_action( 'woocommerce_product_additional_information', $product ); ?>
+
+    </div>
+    <?php
+}
 ?>

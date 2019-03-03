@@ -231,6 +231,24 @@ body div.product .woocommerce-tabs .full-width-content[data-tab-style="fullwidth
     display: none!important;
 }
 
+.woocommerce ul.products[data-product-style="minimal"] li.product.minimal, .woocommerce-page ul.products[data-product-style="minimal"] li.product.minimal {
+    margin-bottom: 25px!important;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+    margin: 0!important;
+    padding: 0!important;
+}
+
+body div.product .woocommerce-tabs .full-width-content[data-tab-style="fullwidth"] ul.tabs {
+    display: none!important;
+}
+
+.single-product .half-col > h3 {
+    font-size: 30px!important;
+    font-weight: 700!important;
+}
+
 /* WOOF Products Filter */
 .woof_container {
     padding-bottom: 0!important;
