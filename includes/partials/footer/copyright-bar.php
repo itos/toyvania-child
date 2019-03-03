@@ -29,7 +29,7 @@ if ( $disable_footer_copyright == 'false' ) {
 	<div class="container">
 
 		<?php if ( $footer_columns != '1' ) { ?>
-		<div class="col span_5">
+		<div class="col span_7">
 
 			<?php
 			if ( $copyright_footer_layout == 'centered' ) {
@@ -182,7 +182,7 @@ else :
 	  </div><!--/span_7-->
 
 	  <?php if ( $footer_columns == '1' ) { ?>
-		<div class="col span_5">
+		<div class="col span_7">
 
 			<?php
 			if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 'Footer Copyright' ) ) :
