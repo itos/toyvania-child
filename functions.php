@@ -170,6 +170,46 @@ function other_details_tab_content() {
 
     <?php the_content(); ?>
 
+		<!-- Display Categories, Brands, Characters -->
+
+		<?php
+				global $post;
+				$terms = get_the_terms( $post->ID, 'product_cat' );
+				foreach ($terms as $term) {
+						$product_cat_id = $term->term_id;
+    				break;
+				}
+		?>
+
+		<div class="product_meta">
+				<?php echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Type:', 'Categories:', sizeof( get_the_terms( $post->ID, 'product_cat' ) ), 'woocommerce' ) . ' ', '</span>' ); ?>
+
+				<span><?php echo 'Brand: '?>
+							<?php $terms = get_the_terms( $post->ID , 'brands' );
+		              foreach ( $terms as $term ) {
+		                  $term_link = get_term_link( $term, 'brands' );
+		                  if( is_wp_error( $term_link ) )
+		                  continue;
+		              echo '<a href="' . $term_link . '">' . $term->name . '</a>';
+		              }
+							?>
+				</span>
+
+				<span><?php echo 'Character: '?>
+							<?php $terms = get_the_terms( $post->ID , 'characters' );
+		              foreach ( $terms as $term ) {
+		                  $term_link = get_term_link( $term, 'characters' );
+		                  if( is_wp_error( $term_link ) )
+		                  continue;
+		              echo '<a href="' . $term_link . '">' . $term->name . '</a>';
+		              }
+							?>
+				</span>
+
+
+
+		</div>
+
     </div>
 
     <!-- 2. Product Additional information -->
@@ -185,4 +225,8 @@ function other_details_tab_content() {
     </div>
     <?php
 }
+
+/* Remove product meta */
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
 ?>
