@@ -249,6 +249,18 @@ body div.product .woocommerce-tabs .full-width-content[data-tab-style="fullwidth
     font-weight: 700!important;
 }
 
+.container .main-content {
+    padding-top: 15px!important;
+}
+
+.woocommerce::before {
+    padding-top: 30px!important;
+}
+
+.woocommerce-info {
+    margin-top: 30px!important;
+}
+
 /* WOOF Products Filter */
 .woof_container {
     padding-bottom: 0!important;
