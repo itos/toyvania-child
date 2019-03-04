@@ -229,4 +229,13 @@ function other_details_tab_content() {
 /* Remove product meta */
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
+
+/* Remove Featured Image on Single Product Page for All Products */
+add_filter( 'iconic_woothumbs_all_image_ids', 'iconic_remove_featured_on_single', 10, 2 );
+
+function iconic_remove_featured_on_single( $all_images, $id ) {
+    unset( $all_images['featured'] );
+    return $all_images;
+}
+
 ?>
