@@ -238,4 +238,13 @@ function iconic_remove_featured_on_single( $all_images, $id ) {
     return $all_images;
 }
 
+// Add Limited Edition Text
+add_filter( 'woocommerce_get_availability_text', 'bbloomer_custom_get_availability_text', 99, 2 );
+
+function bbloomer_custom_get_availability_text( $availability, $product ) {
+  $stock = $product->get_stock_quantity();
+  if ( $product->is_in_stock() && $product->managing_stock() && get_option( 'woocommerce_stock_format' ) == '' ) $availability = __('Limited Edition: ' . $stock, 'woocommerce');
+  return $availability;
+}
+
 ?>
