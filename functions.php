@@ -247,7 +247,7 @@ function bbloomer_custom_get_availability_text( $availability, $product ) {
   return $availability;
 }
 
-
+// Remove variable price in products and add From:
 function wc_varb_price_range( $wcv_price, $product ) {
 
     $prefix = sprintf('%s: ', __('From', 'wcvp_range'));
@@ -265,6 +265,7 @@ function wc_varb_price_range( $wcv_price, $product ) {
         $wcv_price :
         sprintf('%s%s', $prefix, $wcv_price);
 }
+
 
 add_filter( 'woocommerce_variable_sale_price_html', 'wc_varb_price_range', 10, 2 );
 add_filter( 'woocommerce_variable_price_html', 'wc_varb_price_range', 10, 2 );
