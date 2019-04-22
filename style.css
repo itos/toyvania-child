@@ -282,6 +282,10 @@ html .woocommerce .woocommerce-message, html .woocommerce .woocommerce-error, ht
     margin-top: 15px;
 }
 
+tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--weight, tr.woocommerce-product-attributes-item.woocommerce-product-attributes-item--dimensions {
+  display: none!important;
+}
+
 /* WOOF Products Filter */
 .woof_container {
     padding-bottom: 0!important;
