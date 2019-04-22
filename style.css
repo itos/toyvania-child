@@ -24,6 +24,10 @@ body em {
   font-style: normal!important;
 }
 
+.background-size-contain {
+  background-size: contain;
+}
+
 /* Header */
 #header-outer[data-format="centered-menu-under-logo"] header#top .span_9 nav >ul >li:not(#social-in-menu):not(#search-btn):not(.slide-out-widget-area-toggle) >a {
     text-transform: uppercase;
